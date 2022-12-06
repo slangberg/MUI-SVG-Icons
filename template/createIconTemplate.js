@@ -5,7 +5,7 @@ const template = (variables, { tpl, ...rest }) => {
 
   
   const ${variables.componentName} = createSvgIcon(
-    React.createElement(React.Fragment, ${variables.jsx.children}),
+    React.createElement(React.Fragment, null, ${variables.jsx.children}),
     '${variables.componentName.replace("Svg", "")}',
   );
    

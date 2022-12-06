@@ -1,8 +1,43 @@
 # MUI-SVG-Icons
 
-Template to create icons for MUI 5 using the included `createSvgIcon` util from the '@mui/material/utils' library and the SVGR cli.
+**Description**:  This project demonstrates how to use a template to create icons for MUI 5 using the included `createSvgIcon` util from the '@mui/material/utils' library and the SVGR cli.
+
+This repo is set to convert any svgs included in `./svgs` folder into the `<SvgIcon/>` component included in the MUI library. These generated icons will use the same API as the native component
+
+## Technology stack
+  - React
+  - MUI v5
+  - Vite
+  - @svgr/cli
+
+## Installation
+
+To install the this project follow the standard yarn/node installation
+
+```shell
+yarn install
+```
 
 
-## What Does this Repo Demonstrate
+## Usage
 
-This repo is set to covert any svgs included in `./svgs` folder into the `<SvgIcon/>` component included in the MUI library. These generated icons will use the same API as the native component
+**How To Generate Icons From SVGS**: 
+
+Place SVG for intended icons in the `./svgs` folder
+
+Then run the following yarn script
+
+```shell
+yarn gen
+```
+
+This script will render the icons within the `./src/icons` folder, and the application will render all icons exported from the index.ts barrel file withing the directory.
+
+**How To Preview Icons**: 
+
+Then run the vite dev script 
+
+```shell
+yarn dev
+```
+

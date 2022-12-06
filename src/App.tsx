@@ -1,32 +1,25 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
-
+import * as Icons from "./icons"
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
 function App() {
-  const [count, setCount] = useState(0)
-
+  const iconsArray = Object.entries(Icons);
   return (
     <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
+      <h1>MUI 5 + SVGR Icons Example</h1>
       <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
+        This application demonstractes all provided SVG's below.
       </p>
+      <Grid sx={{ flexGrow: 1 }} container spacing={2}>
+        {iconsArray.map(([name, Icon]) => {
+          return ( 
+          <Grid key={name} item sx={{textAlign: 'center'}}>
+            <Icon/> 
+            <Typography variant="caption" display="block" gutterBottom>
+              {name}
+            </Typography>
+          </Grid>)
+        })}
+      </Grid>
     </div>
   )
 }
