@@ -16,6 +16,7 @@ To install the this project follow the standard yarn/node installation
 
 ```shell
 yarn install
+npm install
 ```
 
 
@@ -29,6 +30,7 @@ Then run the following yarn script
 
 ```shell
 yarn gen
+npm run gen
 ```
 
 This script will render the icons within the `./src/icons` folder, and the application will render all icons exported from the index.ts barrel file withing the directory.
