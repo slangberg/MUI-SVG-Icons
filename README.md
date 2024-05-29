@@ -1,65 +1,45 @@
-# MUI-SVG-Icons
 
-**Description**:  This project demonstrates how to use a template to create icons for MUI 5 using the included `createSvgIcon` util from the '@mui/material/utils' library and the SVGR cli.
+# mui-svgr-generator
 
-This repo is set to convert any svgs included in `./svgs` folder into the `<SvgIcon/>` component included in the MUI library. These generated icons will use the same API as the native component
-
-## Technology stack
-  - React
-  - MUI v5
-  - Vite
-  - @svgr/cli
+`mui-svgr-generator` is a command-line tool to generate MUI-compatible SVG React components using SVGR. This tool helps streamline the process of converting SVG files into Material-UI Icon components.
 
 ## Installation
 
-To install the this project follow the standard yarn/node installation
+You can install `mui-svgr-generator` globally using npm:
 
-```shell
-yarn install
-npm install
+```bash
+npm install -g mui-svgr-generator
 ```
-
 
 ## Usage
 
-**How To Generate Icons From SVGS**: 
+### Command Line
 
-Place SVG for intended icons in the `./svgs` folder
+To generate MUI-compatible Icon components from SVG files, you can use the following command:
 
-Then run the following yarn script
+```bash
+npx run mui-svgr-generator [options]
+```
+### Options
+  `-V, --version`: Output the version number
+  `-i, --inDir <directory>`: Input directory for the icons
+  `-o, --outDir <directory>`: Output directory for the icons (default: "./icons")
+  `-ts, --typescript <"true" | "false">` : Whether to generate typescript icons (true or false) (default: "true")
+  `-h, --help`: Display help for command
 
-```shell
-yarn gen
-npm run gen
+### Example
+
+```bash
+mui-svgr-generator --i ./svgs -o ./icons
 ```
 
-This script will render the icons within the `./src/icons` folder, and the application will render all icons exported from the index.ts barrel file withing the directory.
+This will convert all SVG files in the `./svgs` directory into TypeScript React components wrapped with MUI's `SvgIcon` and save them in the `./icons` directory.
 
-**How To Preview Icons**: 
 
-Then run the vite dev script 
+## Contributing
 
-```shell
-yarn dev
-```
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Template Used For SVGR
+## License
 
-```js
-const template = (variables, { tpl, ...rest }) => {
-    return tpl`
-  import * as React from 'react';
-  import { createSvgIcon } from '@mui/material/utils';
-
-  
-  const ${variables.componentName} = createSvgIcon(
-    React.createElement(React.Fragment, null, ${variables.jsx.children}),
-    '${variables.componentName.replace("Svg", "")}',
-  );
-   
-  export default ${variables.componentName};
-  `
-  }
-  
-  module.exports = template
-```
+This project is licensed under the MIT License.

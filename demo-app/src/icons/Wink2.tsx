@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgWink2 = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgWink2 = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm4.5 6c.828 0 1.5 1.007 1.5 2.25s-.672 2.25-1.5 2.25S15 9.493 15 8.25 15.672 6 16.5 6zM8.25 7.314c1.398 0 2.391.523 2.391 1.343 0 .173.089 1.008-.004 1.162-.348-.576-1.285-.989-2.387-.989s-2.039.413-2.387.989c-.093-.155-.004-.989-.004-1.162 0-.819.993-1.343 2.391-1.343zM11.727 19.5c-2.795 0-5.247-1.507-6.63-3.772 1.65 1.29 4.559 1.542 7.624.937 3.287-.649 5.839-2.146 6.761-4.139-.508 3.937-3.786 6.974-7.754 6.974z" />
-  </svg>
+  ),
+  "Wink2"
 );
 export default SvgWink2;

@@ -1,7 +1,7 @@
 {
   "name": "mui-svgr-generator",
   "description": "A NPM script to convert raw svgs into MUI icons",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "type": "commonjs",
   "main": "src/index.js",
   "scripts": {
@@ -19,21 +19,22 @@
     "svg",
     "icons"
   ],
-  "author": "Your Name",
+  "author": "Samuel Langberg",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/slangberg/MUI-SVG-Icons/issues"
   },
-  "homepage": "https://github.com/slangberg/MUI-SVG-Icons#readme",
+  "homepage": "https://slangberg.github.io/MUI-SVG-Icons/",
   "dependencies": {
+    "@mui/material": "^5.10.16",
     "@svgr/cli": "^6.5.1",
     "@types/node": "^20.12.12",
+    "colors": "^1.4.0",
     "commander": "^12.1.0"
   },
   "devDependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.10.16",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^18.0.9",
     "@vitejs/plugin-react": "^4.2.1",
@@ -41,12 +42,5 @@
     "react-dom": "^18.2.0",
     "typescript": "^4.6.4",
     "vite": "^5.2.0"
-  },
-  "peerDependencies": {
-    "@emotion/react": ">=11.0.0 <12.0.0",
-    "@emotion/styled": ">=11.0.0 <12.0.0",
-    "@mui/material": ">=5.0.0 <6.0.0",
-    "react": ">=17.0.0 <19.0.0",
-    "react-dom": ">=17.0.0 <19.0.0"
   }
 }

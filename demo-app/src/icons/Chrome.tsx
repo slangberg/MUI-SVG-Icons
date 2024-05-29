@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgChrome = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgChrome = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M6.053 10.466 2.619 4.518A11.978 11.978 0 0 1 12 .001c4.393 0 8.234 2.361 10.325 5.883h-9.791a6.152 6.152 0 0 0-6.48 4.583zm10.243-2.849h6.878A11.97 11.97 0 0 1 24 12c0 6.582-5.299 11.925-11.864 11.998l4.908-8.5a6.123 6.123 0 0 0-.747-7.881zM7.641 12c0-2.404 1.956-4.359 4.359-4.359S16.359 9.597 16.359 12c0 2.404-1.956 4.359-4.359 4.359S7.641 14.403 7.641 12zm6.004 5.917-3.435 5.95C4.432 23.003.001 18.019.001 12c0-2.138.56-4.145 1.54-5.883l4.899 8.486a6.147 6.147 0 0 0 7.206 3.314z" />
-  </svg>
+  ),
+  "Chrome"
 );
 export default SvgChrome;

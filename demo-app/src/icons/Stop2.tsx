@@ -1,8 +1,7 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgStop2 = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
-    <path d="M3 3h18v18H3z" />
-  </svg>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgStop2 = createSvgIcon(
+  React.createElement(React.Fragment, null, <path d="M3 3h18v18H3z" />),
+  "Stop2"
 );
 export default SvgStop2;

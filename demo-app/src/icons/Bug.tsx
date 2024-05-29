@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgBug = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgBug = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M24 13.5V12h-4.53a8.665 8.665 0 0 0-1.68-4.506h3.796L23.228.926 21.773.562l-1.358 5.432h-4.094l-.063-.048A4.494 4.494 0 0 0 12.001 0a4.494 4.494 0 0 0-4.257 5.946l-.063.048H3.587L2.229.562.774.926l1.642 6.568h3.796A8.67 8.67 0 0 0 4.532 12H.002v1.5h4.532a8.816 8.816 0 0 0 .788 2.994H2.416L.774 23.062l1.455.364 1.358-5.432H6.22c1.376 1.829 3.455 2.994 5.781 2.994s4.405-1.165 5.781-2.994h2.633l1.358 5.432 1.455-.364-1.642-6.568H18.68a8.822 8.822 0 0 0 .788-2.994H24z" />
-  </svg>
+  ),
+  "Bug"
 );
 export default SvgBug;

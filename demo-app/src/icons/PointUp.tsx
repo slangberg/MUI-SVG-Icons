@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgPointUp = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgPointUp = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M22.5 14.25V10.5a2.252 2.252 0 0 0-3.354-1.96 2.25 2.25 0 0 0-3.396-.466 2.24 2.24 0 0 0-2.25-.445V2.25C13.5 1.009 12.491 0 11.25 0S9 1.009 9 2.25v9.25L4.875 9.301A2.251 2.251 0 0 0 1.5 11.25c0 .618.245 1.194.691 1.622l.018.016 5.606 5.111H6.751a.75.75 0 0 0-.75.75v4.5c0 .414.336.75.75.75h15a.75.75 0 0 0 .75-.75v-4.5a.75.75 0 0 0-.75-.75h-1.036l1.707-3.415a.75.75 0 0 0 .079-.335zm-1.5 6a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0zm0-6.177L19.037 18h-8.996l-6.816-6.215a.75.75 0 0 1 .884-1.194l.038.022 5.25 2.799a.75.75 0 0 0 1.103-.662V2.25a.75.75 0 0 1 1.5 0v7.5a.75.75 0 0 0 1.5 0 .75.75 0 0 1 1.5 0 .75.75 0 0 0 1.5 0 .75.75 0 0 1 1.5 0v.75a.75.75 0 0 0 1.5 0 .75.75 0 0 1 1.5 0v3.573z" />
-  </svg>
+  ),
+  "PointUp"
 );
 export default SvgPointUp;

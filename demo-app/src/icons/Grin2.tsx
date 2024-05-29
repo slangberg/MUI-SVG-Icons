@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgGrin2 = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgGrin2 = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M12 0C5.373 0 0 5.373 0 12s5.372 12 12 12c6.627 0 12-5.373 12-12S18.627 0 12 0zm4.5 5.531a2.722 2.722 0 0 1 2.681 3.172.468.468 0 0 1-.924 0c-.144-.86-.883-1.249-1.756-1.249s-1.612.39-1.756 1.249a.468.468 0 0 1-.924 0 2.722 2.722 0 0 1 2.681-3.172zm-9 0a2.722 2.722 0 0 1 2.681 3.172.468.468 0 0 1-.924 0c-.144-.86-.883-1.249-1.756-1.249s-1.612.39-1.756 1.249a.468.468 0 0 1-.924 0 2.722 2.722 0 0 1 2.681-3.172zm-3 7.969H9v5.809c-2.58-.67-4.5-3.026-4.5-5.809zm6 6v-6h3v6h-3zm4.5-.191V13.5h4.5c0 2.783-1.92 5.138-4.5 5.809z" />
-  </svg>
+  ),
+  "Grin2"
 );
 export default SvgGrin2;

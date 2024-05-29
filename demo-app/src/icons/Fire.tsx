@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgFire = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgFire = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M7.524 24c-1.6-3.328-.748-5.235.482-7.032C9.352 15 9.699 13.052 9.699 13.052s1.058 1.376.635 3.528c1.87-2.081 2.222-5.397 1.94-6.667C16.5 12.866 18.306 19.261 15.872 24c12.946-7.325 3.22-18.285 1.527-19.52.564 1.235.671 3.325-.469 4.339C15 1.5 10.228 0 10.228 0c.564 3.774-2.046 7.902-4.563 10.986-.088-1.505-.182-2.544-.974-3.984-.178 2.734-2.267 4.963-2.833 7.702-.766 3.71.574 6.426 5.666 9.296z" />
-  </svg>
+  ),
+  "Fire"
 );
 export default SvgFire;

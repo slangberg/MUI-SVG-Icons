@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgBubbles2 = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={27} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgBubbles2 = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M11.25 0C17.463 0 22.5 4.076 22.5 9.104s-5.037 9.104-11.25 9.104c-.597 0-1.182-.038-1.754-.11C7.079 20.505 4.289 20.936 1.5 21v-.589c1.506-.735 2.719-2.073 2.719-3.603a4.2 4.2 0 0 0-.048-.628C1.627 14.511 0 11.962 0 9.104 0 4.076 5.037 0 11.25 0zm12.094 20.407c0 1.311.851 2.459 2.156 3.088V24c-2.417-.054-4.636-.424-6.73-2.487-.495.062-1.003.095-1.52.095-2.238 0-4.299-.604-5.944-1.618 3.391-.012 6.592-1.098 9.02-3.063 1.224-.99 2.189-2.152 2.869-3.453a9.352 9.352 0 0 0 1.058-5.099c1.701 1.405 2.748 3.319 2.748 5.43 0 2.449-1.41 4.634-3.615 6.065a3.54 3.54 0 0 0-.041.538z" />
-  </svg>
+  ),
+  "Bubbles2"
 );
 export default SvgBubbles2;

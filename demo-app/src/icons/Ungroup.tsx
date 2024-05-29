@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgUngroup = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgUngroup = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M9 10.875C9 11.494 8.494 12 7.875 12h-2.25A1.128 1.128 0 0 1 4.5 10.875v-2.25c0-.619.506-1.125 1.125-1.125h2.25C8.494 7.5 9 8.006 9 8.625v2.25zM16.5 10.875c0 .619-.506 1.125-1.125 1.125h-2.25A1.128 1.128 0 0 1 12 10.875v-2.25c0-.619.506-1.125 1.125-1.125h2.25c.619 0 1.125.506 1.125 1.125v2.25zM9 18.375c0 .619-.506 1.125-1.125 1.125h-2.25A1.128 1.128 0 0 1 4.5 18.375v-2.25c0-.619.506-1.125 1.125-1.125h2.25C8.494 15 9 15.506 9 16.125v2.25zM16.5 18.375c0 .619-.506 1.125-1.125 1.125h-2.25A1.128 1.128 0 0 1 12 18.375v-2.25c0-.619.506-1.125 1.125-1.125h2.25c.619 0 1.125.506 1.125 1.125v2.25zM21.377 3.75 24 1.127V0h-1.127L20.25 2.623 17.627 0H16.5v1.127l2.623 2.623L16.5 6.373V7.5h1.127l2.623-2.623L22.873 7.5H24V6.373zM0 18h1.5v3H0v-3zM0 13.5h1.5v3H0v-3zM19.5 10.5H21v3h-1.5v-3zM19.5 19.5H21v3h-1.5v-3zM19.5 15H21v3h-1.5v-3zM0 9h1.5v3H0V9zM0 4.5h1.5v3H0v-3zM12 3h3v1.5h-3V3zM7.5 3h3v1.5h-3V3zM3 3h3v1.5H3V3zM10.5 22.5h3V24h-3v-1.5zM15 22.5h3V24h-3v-1.5zM6 22.5h3V24H6v-1.5zM1.5 22.5h3V24h-3v-1.5z" />
-  </svg>
+  ),
+  "Ungroup"
 );
 export default SvgUngroup;

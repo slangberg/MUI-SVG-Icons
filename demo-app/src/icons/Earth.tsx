@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgEarth = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgEarth = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 22.5a10.47 10.47 0 0 1-4.154-.854l5.464-6.147a.75.75 0 0 0 .189-.498v-2.25a.75.75 0 0 0-.75-.75c-2.648 0-5.442-2.753-5.47-2.78a.749.749 0 0 0-.53-.22h-3a.75.75 0 0 0-.75.75v4.5a.75.75 0 0 0 .415.671l2.585 1.293v4.404a10.486 10.486 0 0 1-4.5-8.617c0-1.61.363-3.136 1.011-4.5h2.739c.199 0 .39-.079.53-.22l3-3a.749.749 0 0 0 .22-.53V1.938a10.498 10.498 0 0 1 3-.436c1.65 0 3.211.381 4.6 1.059a4.47 4.47 0 0 0-1.6 3.441 4.47 4.47 0 0 0 1.318 3.182 4.49 4.49 0 0 0 3.402 1.313c.324 1.214.908 4.375-.197 8.727a.886.886 0 0 0-.02.122 10.467 10.467 0 0 1-7.503 3.156z" />
-  </svg>
+  ),
+  "Earth"
 );
 export default SvgEarth;

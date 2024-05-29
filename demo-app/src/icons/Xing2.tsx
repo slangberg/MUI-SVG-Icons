@@ -1,8 +1,11 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SvgXing2 = (props: SVGProps<SVGSVGElement>) => (
-  <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} {...props}>
+import { createSvgIcon } from "@mui/material/utils";
+const SvgXing2 = createSvgIcon(
+  React.createElement(
+    React.Fragment,
+    null,
     <path d="M3.647 4.739c-.206 0-.384.075-.473.216-.089.15-.075.338.019.53l2.339 4.05c.005.009.005.014 0 .019l-3.675 6.497c-.094.192-.089.384 0 .53a.511.511 0 0 0 .45.234h3.459c.516 0 .769-.352.942-.67l3.736-6.609-2.381-4.148c-.173-.305-.431-.647-.966-.647h-3.45zM18.188 0c-.516 0-.741.323-.928.661 0 0-7.458 13.223-7.702 13.659.014.023 4.917 9.023 4.917 9.023.173.305.436.661.966.661H18.9c.206 0 .37-.08.459-.22.094-.15.089-.342-.009-.534l-4.875-8.92c-.005-.009-.005-.014 0-.023L22.139.755c.094-.192.098-.384.009-.534-.089-.141-.253-.22-.459-.22h-3.502z" />
-  </svg>
+  ),
+  "Xing2"
 );
 export default SvgXing2;
